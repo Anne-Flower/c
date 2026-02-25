@@ -11,12 +11,18 @@ struct Employee {
 
 void init_employee(struct Employee *emp);
 
+void init_employee(struct Employee *emp) {
+        strcpy( emp->name, "Stevie");
+        emp->salary = 3333.333;
+        printf("employee : %s win %.2f \n", emp->name, emp->salary);
+};
 
-        void init_employee(struct Employee *emp) {
-                strcpy( emp->name, "Stevie");
-                emp->salary = 3333.333;
-                printf("employee : %s win %.2f \n", emp->name, emp->salary);
-        }
+void destroy_employee(struct Employee *emp) {
+    emp->name[0] = 0;
+    emp->salary = 0;
+
+    free(emp);
+}
 
 int main() {
 
