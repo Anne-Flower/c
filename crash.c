@@ -2,21 +2,21 @@
 
 int value1 = 1;
 int value2 = 5;
-#define BUFFER 4;
-
-int *areaResult = 1;
+#define BUFFER_SIZE 4
 
 int add(int num1, int num2)
 {
     return num1 + num2;
 }
 
-int calculArea(int value1, int value2)
+int calculArea(int valueA, int valueB)
 {
-    return *areaResult = value1 * value2;
+    int buffer[BUFFER_SIZE];
+    return buffer[10] = valueA * valueB;
 }
 
 int main()
 {
-    print(add(value1, value2));
+    printf("%d\n", add(value1, value2));
+    printf("%d\n", calculArea(value1, value2));
 }
